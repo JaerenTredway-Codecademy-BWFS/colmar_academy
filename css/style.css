@@ -1,17 +1,140 @@
-/* CSS BOILERPLATE */
-
 
 /* UNIVERSAL STYLES: */
+html {
+  box-sizing: border-box;
+  color: #3A3B4A;
+}
 
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+* {
+  /* background: rgba(0,0,0,0.1);/*wireframe*/ */
+}
+
+body {
+  font-family: "Sunflower", sans-serif;
+  color: #3A3B4A;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+}
+
+p {
+  font-weight: 300;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #3A3B4A;
+}
+
+/* Palette UID: 13O0u0kllll2XhDc9jvuxnbSap2 */
+/* PALLET:
+#042587
+#132E7D
+#2F4073
+#464E69
+#57595F
+*/
 
 /* HEADER: */
+header {
+  display: flex;
+  align-items: center;
+  font-family: "Oxygen", sans-serif;
+  border-bottom: 1px "Silver";
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background-color: White;
+  /* filter: brightness(250%); */
+}
 
+header .logo {
+  display: flex;
+  margin-left: 1rem;
+  height: 3.25rem;
+  width: 3rem;
+}
+
+header .logo img {
+  height: 2.8rem;
+  width: 2.8rem;
+  margin-top: auto;
+  fill: #042587;
+}
+
+header h2 {
+  font-weight: 300;
+  color: #c1c1d7;
+}
+
+header h2 span {
+  font-weight: 400;
+  color: #042587;
+}
 
 /* nav bar: */
+header nav {
+  margin-left: auto;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  flex-basis: 32rem;
+}
 
+header ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  flex: 1;
+  height: 2.5rem;
+    /* border: 1px solid blue; */
+}
+
+header li {
+  display: flex;
+  justify-content: center;
+  min-width: 7rem;
+  text-align: center;
+    /* border: 1px solid green; */
+}
+
+#hamburger_icon {
+  display: none;
+}
+
+#for_companies {
+  width: 6.25rem;
+}
+
+header a {
+  width: 5rem;
+  transition: all 0.2s linear 0s;
+  color: #464E69;
+    /* border: 1px solid red; */
+}
+
+header a:hover {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #57595F;
+  opacity: 0.9;
+}
 
 /* LANDING SECTION: */
-
+.landing_section {
+  position: relative;
+  top: 4.5rem;
+}
 
 /* NEWS SECTION: */
 
