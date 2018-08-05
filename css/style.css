@@ -10,7 +10,8 @@ html {
 }
 
 * {
-  /* background: rgba(0,0,0,0.1);/*wireframe*/ */
+  /* background: rgba(0,0,0,0.1);/*wireframe*/
+  border: 1px solid red;
 }
 
 body {
@@ -118,9 +119,8 @@ header li {
 
 header a {
   width: 5rem;
-  transition: all 0.2s linear 0s;
+  transition: all 0.2s ease-out 0s;
   color: #464E69;
-    /* border: 1px solid red; */
 }
 
 header a:hover {
@@ -130,11 +130,72 @@ header a:hover {
   opacity: 0.9;
 }
 
+
 /* LANDING SECTION: */
 .landing_section {
+  background-color: #efeff5;
   position: relative;
   top: 4.5rem;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
 }
+
+@media screen and (max-width:736px) {
+  .landing_section {
+    flex-wrap: wrap;
+  }
+}
+
+.landing_image_box {
+  width: 58%;
+  min-width: 22rem;
+  height: auto;
+  margin: 1rem;
+}
+
+.landing_image_box img {
+  width: 100%;
+  height: auto;
+}
+
+.title_box {
+  max-width: 25rem;
+  /* min-width: 18rem; */
+  display: flex;
+  flex-direction: column;
+  margin: 0 0.5rem;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.title_box > * {
+  min-width: 15rem;
+  display: flex;
+  margin: 0.5rem 0;
+}
+
+.title_box .button {
+  padding: 1rem;
+  text-align: center;
+  justify-content: center;
+  background-color: #2F4073;
+  transition: all 0.2s ease-out 0s;
+}
+
+.title_box .button a {
+  color: #efeff5;
+}
+
+.title_box .button:hover {
+  background-color: #042587;
+}
+
+.title_box .button:active {
+  background-color: Blue;
+}
+
 
 /* NEWS SECTION: */
 
