@@ -209,7 +209,7 @@ main {
   /* height: auto; */
   display: flex;
   justify-content: center;
-    border: 1px solid green;
+    /* border: 1px solid green; */
 }
 
 @media screen and (max-width:736px) {
@@ -224,7 +224,7 @@ main {
   height: auto;
   margin: 1rem;
   padding-bottom: 2rem;
-    border: 1px solid purple;
+    /* border: 1px solid purple; */
 }
 
 .main_article_box .image_box img {
@@ -239,35 +239,66 @@ main {
   flex-direction: column;
   margin: 1rem 0.5rem;
   justify-content: space-between;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .side_article {
   min-width: 15rem;
   height: 30%;
   display: flex;
-  align-items: center;
-    border: 1px solid blue;
+  align-items: flex-start;
+    /* border: 1px solid blue; */
+}
+
+@media screen and (max-width:736px) {
+  .side_article {
+    flex-wrap: wrap;
+    height: auto;
+  }
 }
 
 .side_article .image_box {
-  width: auto;
-  height: 90%;
+  height: 100%;
   width: 40%;
+  /* flex: none; */
+    /* border: 1px solid blue; */
+}
+
+@media screen and (max-width:736px) {
+  .side_article .image_box {
+    width: 90%;
+    height: 10rem;
+    margin-left: 1rem;
+  }
 }
 
 .side_article .image_box img {
+  /* display: flex; */
   width: 100%;
-  height: 100%;
+  height: auto;
+  /* flex-shrink: 0; */
+}
+
+.side_article .image_box source {
+  /* display: flex; */
+  width: 100%;
+  height: auto;
+  /* flex-shrink: 0; */
 }
 
 .content_box {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin-left: 1rem;
+  /* justify-content: flex-start; */
+  margin: 1rem 0 1.5rem 1rem;
   width: 65%;
-    border: 1px solid green;
+    /* border: 1px solid green; */
+}
+
+@media screen and (max-width:736px) {
+  .content_box {
+    width: 90%;
+  }
 }
 
 .content_box > * {
@@ -275,7 +306,7 @@ main {
 }
 
 .content_box a {
-  /* color: "LightBlue"; */
+  color: "LightBlue";
 }
 
 .guest_lecture {
