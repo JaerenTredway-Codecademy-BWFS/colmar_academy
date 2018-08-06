@@ -25,6 +25,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   font-weight: 300;
+  color: #595959;
 }
 
 li {
@@ -124,11 +125,18 @@ header a {
 }
 
 header a:hover {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: #57595F;
   opacity: 0.9;
 }
+
+/*
+does not work, no idea why:
+.nav_buttons a:active {
+  color: Blue;
+}
+*/
 
 main {
   position: relative;
@@ -138,7 +146,7 @@ main {
 
 /* LANDING SECTION: */
 .landing_section {
-  background-color: #efeff5;
+  background: linear-gradient(to bottom right, #cccccc, #f2f2f2);
   width: 100%;
   height: auto;
   display: flex;
@@ -165,7 +173,6 @@ main {
 
 .title_box {
   max-width: 25rem;
-  /* min-width: 18rem; */
   display: flex;
   flex-direction: column;
   margin: 0 0.5rem;
@@ -202,11 +209,7 @@ main {
 
 /* NEWS SECTION: */
 .news_section {
-  /* position: relative; */
-  /* top: 4.5rem; */
   width: 100%;
-  /* margin-top: 1rem; */
-  /* height: auto; */
   display: flex;
   justify-content: center;
     /* border: 1px solid green; */
@@ -234,7 +237,6 @@ main {
 
 .side_articles_box {
   max-width: 25rem;
-  /* min-width: 18rem; */
   display: flex;
   flex-direction: column;
   margin: 1rem 0.5rem;
@@ -260,7 +262,6 @@ main {
 .side_article .image_box {
   height: 100%;
   width: 40%;
-  /* flex: none; */
     /* border: 1px solid blue; */
 }
 
@@ -273,27 +274,28 @@ main {
 }
 
 .side_article .image_box img {
-  /* display: flex; */
   width: 100%;
   height: auto;
-  /* flex-shrink: 0; */
 }
 
 .side_article .image_box source {
-  /* display: flex; */
   width: 100%;
   height: auto;
-  /* flex-shrink: 0; */
 }
 
 .content_box {
   display: flex;
   flex-direction: column;
-  /* justify-content: flex-start; */
   margin: 1rem 0 1.5rem 1rem;
   width: 65%;
     /* border: 1px solid green; */
 }
+
+/* I made all the <p> elements grey up in the Universal Styles section
+.content_box p {
+  color: #404040;
+ }
+*/
 
 @media screen and (max-width:736px) {
   .content_box {
@@ -311,9 +313,24 @@ main {
 }
 
 .side_article .content_box a:hover {
-  color: #80aaff;
   font-weight: 400;
 }
+
+.side_article .content_box a:active {
+  color: Blue;
+  font-weight: 400;
+}
+
+/* does not work, even after deleting all cache, history, and cookies: */
+/*.side_article .content_box a:visited {
+  color: #bfbfbf;
+  font-weight: 300;
+}*/
+
+/*.side_article .content_box a:link {
+  color: #80aaff;
+  font-weight: 300;
+}*/
 
 .guest_lecture {
   background-color: #efeff5;
@@ -326,11 +343,14 @@ main {
   display: block;
   text-align: center;
   width: 100%;
-  background-color: #efeff5;
-    border: 1px solid red;
+  background: linear-gradient(to bottom right, #cccccc, #f2f2f2);
+  padding: 1rem 0;
+    /* border: 1px solid red; */
 }
 
-/* .all_courses_box { */
+/* this became redundant:
+.all_courses_box {
+*/
 
 .course_row {
   margin: 1rem auto;
@@ -338,7 +358,7 @@ main {
   justify-content: space-around;
   width: 85%;
   /* background-color: #efeff5; */
-  border: 1px solid green;
+  /* border: 1px solid green; */
 }
 
 @media screen and (max-width:736px) {
@@ -351,22 +371,36 @@ main {
 .course {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 30%;
   background-color: White;
   min-width: 13rem;
   margin: 0.5rem;
-  transition: all 0.2s ease-out 0s;
+}
+
+.course a {
+  color: #000000;
+  transition: all 0.4s ease-out 0;
+}
+
+.course a:hover {
+  font-weight: 700;
+  color: #80aaff;
+}
+
+.course a:active {
+  color: Blue;
+}
+
+.course h4, .course p {
+  color: #595959;
 }
 
 .course p {
-  border: 1px solid blue;
-  height: 4rem;
-}
-
-.course:hover {
-  background-color: #b3ccff;
-  border: 3px solid White;
+  /* border: 1px solid blue; */
+  height: 5.5rem;
+  margin-bottom: 1rem;
+  padding: 0 0.5rem;
 }
 
 @media screen and (max-width:736px) {
@@ -378,20 +412,123 @@ main {
 @media screen and (max-width:736px) {
   .course {
     width: 85%;
+    height: 100%;
   }
 }
 
 .course .image_box {
   height: 40%;
   width: 100%;
+  padding: 0.25rem;
 }
 
 .course .image_box img {
   width: 100%;
-  height: auto;
+  height: auto%;
+}
+
+.course h3 {
+  padding-top: 0.5rem;
 }
 
 /* EXHIBITS SECTION: */
+.exhibits_section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.exhibits_section .all_exhibits_wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width:1000px) {
+  .exhibits_section .all_exhibits_wrapper {
+    flex-wrap: wrap;
+  }
+}
+
+  .exhibits_section .main_exhibit_box {
+    width: 60%;
+    padding: 0 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+      border: 1px solid Red;
+  }
+
+  @media screen and (max-width:1000px) {
+    .exhibits_section .main_exhibit_box {
+      width: 100%;
+    }
+  }
+
+    .exhibits_section .video_box {
+      width: 100%;
+    }
+
+      .exhibits_section .video_box video {
+        width: 100%;
+        height: auto;
+      }
+
+  .exhibits_section .side_exhibits_wrapper{
+    display: flex;
+    width: 40%;
+  }
+
+  @media screen and (max-width:1000px) {
+    .exhibits_section .side_exhibits_wrapper {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+    }
+  }
+
+    .exhibits_section .side_exhibit_box {
+      width: 50%;
+      padding: 1rem;
+      border: 1px solid Green;
+    }
+
+    @media screen and (max-width:1000px) {
+      .exhibits_section .side_exhibits_box {
+        width: 100%;
+      }
+    }
+
+    .exhibits_section .fisma {
+      background: linear-gradient(to bottom right, #cccccc, #f2f2f2);
+    }
+
+      .exhibits_section .side_exhibit_box .image_box {
+        width: 100%;
+      }
+
+        .exhibits_section .side_exhibit_box .image_box img {
+          width: 100%;
+          height: auto;
+        }
+
+      .exhibits_section .side_exhibit_box .content_box h2 {
+        color: Black;
+      }
+
+      .exhibits_section .side_exhibit_box .content_box a {
+        color: Black;
+      }
+
+      .exhibits_section .side_exhibit_box .content_box a:hover {
+        color: #80aaff;
+      }
+
+      .exhibits_section .side_exhibit_box .content_box a:active {
+        color: Blue;
+      }
+
+
+
 
 
 /* FOOTER */
