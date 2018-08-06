@@ -305,8 +305,14 @@ main {
   margin: 0.3rem;
 }
 
-.content_box a {
-  color: "LightBlue";
+.side_article .content_box a {
+  color: #80aaff;
+  font-weight: 300;
+}
+
+.side_article .content_box a:hover {
+  color: #80aaff;
+  font-weight: 400;
 }
 
 .guest_lecture {
@@ -317,22 +323,62 @@ main {
 /* COURSES SECTION: */
 .courses_section {
   border-top: 1px solid "Silver";
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: block;
+  text-align: center;
   width: 100%;
+  background-color: #efeff5;
     border: 1px solid red;
 }
 
-.courses_box {
-  display: flex;
+/* .all_courses_box { */
 
+.course_row {
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-around;
+  width: 85%;
+  /* background-color: #efeff5; */
+  border: 1px solid green;
+}
+
+@media screen and (max-width:736px) {
+  .course_row {
+    flex-wrap: wrap;
+    max-width: 30rem;
+  }
 }
 
 .course {
   display: flex;
   flex-direction: column;
-  width: 25%;
+  justify-content: space-between;
+  width: 30%;
+  background-color: White;
+  min-width: 13rem;
+  margin: 0.5rem;
+  transition: all 0.2s ease-out 0s;
+}
+
+.course p {
+  border: 1px solid blue;
+  height: 4rem;
+}
+
+.course:hover {
+  background-color: #b3ccff;
+  border: 3px solid White;
+}
+
+@media screen and (max-width:736px) {
+  .course h4, .course p {
+    display: none;
+  }
+}
+
+@media screen and (max-width:736px) {
+  .course {
+    width: 85%;
+  }
 }
 
 .course .image_box {
@@ -344,8 +390,6 @@ main {
   width: 100%;
   height: auto;
 }
-
-
 
 /* EXHIBITS SECTION: */
 
