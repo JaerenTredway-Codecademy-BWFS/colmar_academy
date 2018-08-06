@@ -51,7 +51,7 @@ header {
   display: flex;
   align-items: center;
   font-family: "Oxygen", sans-serif;
-  border-bottom: 1px "Silver";
+  border-bottom: 1px solid #b3b3b3;
   position: fixed;
   width: 100%;
   z-index: 1;
@@ -151,6 +151,7 @@ main {
   height: auto;
   display: flex;
   justify-content: center;
+  border-bottom: 1px solid #b3b3b3;
 }
 
 @media screen and (max-width:736px) {
@@ -209,7 +210,7 @@ main {
 }
 
 .title_box h1 {
-  text-shadow: 2px 1px 0px #ffffff;
+  text-shadow: 1px 1px 0px #ffffff;
 }
 
 
@@ -342,12 +343,14 @@ main {
 
 .guest_lecture {
   background-color: #efeff5;
+  border: 1px solid #b3b3b3;
 }
 
 
 /* COURSES SECTION: */
 .courses_section {
-  border-top: 1px solid "Silver";
+  border-top: 1px solid #b3b3b3;
+  border-bottom: 1px solid #b3b3b3;
   display: block;
   text-align: center;
   width: 100%;
@@ -361,7 +364,7 @@ main {
 */
 
 .courses_section h1 {
-  text-shadow: 2px 1px 0px #ffffff;
+  text-shadow: 1px 1px 0px #ffffff;
 
 }
 
@@ -370,7 +373,6 @@ main {
   display: flex;
   justify-content: space-around;
   width: 85%;
-  /* background-color: #efeff5; */
   /* border: 1px solid green; */
 }
 
@@ -532,6 +534,7 @@ main {
 
       .exhibits_section .side_exhibit_box .content_box h2 {
         color: Black;
+        text-shadow: 2px 1px 0px #f2f2f2;
       }
 
       .exhibits_section .side_exhibit_box .content_box a {
@@ -560,13 +563,20 @@ footer {
 
 footer ul {
   display: flex;
-  width: 15rem;
-  margin: 0 auto;
+  width: 8rem;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: 2rem;
+  padding: 0;
+    /* border: 1px solid green; */
 }
 
 footer ul a {
   color: Black;
-  margin: 2rem;
+  margin: 0;
+  color: #8c8c8c;
+  text-shadow: 1px 1px 0px #ffffff;
+    /* border: 1px solid blue; */
 }
 
 footer ul a:hover {
@@ -575,4 +585,9 @@ footer ul a:hover {
 
 footer ul a:active {
   color: Blue;
+}
+
+footer small {
+  color: #8c8c8c;
+  text-shadow: 1px 1px 0px #ffffff;
 }
