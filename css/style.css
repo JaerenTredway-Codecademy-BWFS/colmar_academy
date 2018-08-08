@@ -166,7 +166,7 @@ header h2 span {
       border: none;
       color: #b3b3b3;
       min-width: 6rem;
-      /* text-align: center; */
+      transition: all .5s ease-out 0s;
   }
 }
 
@@ -176,9 +176,10 @@ header h2 span {
   color: #f2f2f2;
   text-shadow: 1px 1px 0px Black;
  }
+
 /*but not for the regular non-dropdown menu:*/
 @media screen and (min-width:736px) {
-.nav_buttons:hover a:hover {
+.nav_buttons a:hover {
   background-color: inherit;
   }
 }
@@ -254,7 +255,7 @@ main {
   justify-content: center;
   background-color: #2F4073;
   border: 1px solid #f2f2f2;
-  transition: all 0.2s ease-out 0s;
+  transition: all .5s ease-out 0s;
 }
 
 .title_box .button a {
@@ -373,10 +374,11 @@ main {
 .side_article .content_box a {
   color: #80aaff;
   font-weight: 300;
+  transition: all .4s ease-out 0s;
 }
 
 .side_article .content_box a:hover {
-  font-weight: 400;
+  color: #1a66ff;
 }
 
 .side_article .content_box a:active {
@@ -448,17 +450,16 @@ main {
   border: 1px solid #b3b3b3;
 }
 
-.course a {
+.course .course_name a {
   color: #000000;
-  transition: all 0.4s ease-out 0;
+  transition: color 0.3s ease-out 0s;
 }
 
-.course a:hover {
-  font-weight: 700;
+.course .course_name a:hover {
   color: #80aaff;
 }
 
-.course a:active {
+.course .course_name a:active {
   color: Blue;
 }
 
@@ -593,6 +594,8 @@ main {
 
       .exhibits_section .side_exhibit_box .content_box a {
         color: Black;
+        transition: color 0.3s ease-out 0s;
+
       }
 
       .exhibits_section .side_exhibit_box .content_box a:hover {
@@ -630,6 +633,7 @@ footer ul a {
   margin: 0;
   color: #8c8c8c;
   text-shadow: 1px 1px 0px #ffffff;
+  transition: color 0.3s ease-out 0s;
     /* border: 1px solid blue; */
 }
 
