@@ -48,6 +48,7 @@ a {
 
 /* HEADER: */
 header {
+  height: 5rem;
   display: flex;
   align-items: center;
   font-family: "Oxygen", sans-serif;
@@ -56,7 +57,6 @@ header {
   width: 100%;
   z-index: 1;
   background-color: White;
-  /* filter: brightness(250%); */
 }
 
 header .logo {
@@ -70,79 +70,135 @@ header .logo img {
   height: 2.8rem;
   width: 2.8rem;
   margin-top: auto;
-  fill: #042587;
+  /* fill: #042587; */
 }
 
 header h2 {
   font-weight: 300;
   color: #c1c1d7;
+  margin: 0;
 }
 
 header h2 span {
   font-weight: 400;
   color: #042587;
+  margin: 0;
 }
 
-/* nav bar: */
-header nav {
-  margin-left: auto;
-  margin-right: 1rem;
-  display: flex;
-  align-items: center;
-  flex-basis: 32rem;
+/* DROPDOWN MENU: */
+.dropdown_menu {
+  /* this is the container for the hamburger icon initially: */
+    margin-left: auto;
+    margin-right: 1rem;
+    height: 3rem;
+    width: 3rem;
 }
 
-header ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0;
-  flex: 1;
-  height: 2.5rem;
-    /* border: 1px solid blue; */
+@media screen and (min-width:736px) {
+  /* then it changes into a long regular container for larger screens: */
+  .dropdown_menu {
+      display: flex;
+      align-items: center;
+      width: 30rem;
+      margin-right: 1rem;
+  }
 }
 
-header li {
-  display: flex;
-  justify-content: center;
-  min-width: 7rem;
-  text-align: center;
-    /* border: 1px solid green; */
+/* hamburger icon for small screens:*/
+.dropbtn {
+    margin-top: 0.75rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    filter: drop-shadow(1px 2px 0px #999999);
+  }
+
+@media screen and (min-width:736px) {
+/* hamburger icon disappears for larger screens:*/
+.dropbtn {
+    display: none;
+  }
 }
 
-#hamburger_icon {
-  display: none;
+/* dropdown navbar container (hidden by default) AND this is how it looks when it is :hover activated*/
+.nav_buttons {
+    display: none;
+    position: absolute;
+    top: 3.5rem;
+    right: 1rem;
+    min-width: 10rem;
+    box-shadow: 4px 8px 16px 0px rgba(0,0,0,0.5);
+    z-index: 1;
 }
 
-#for_companies {
-  width: 6.25rem;
+/* this is the mod to make it a non-dropdown navbar for larger screens:*/
+@media screen and (min-width:736px) {
+  .nav_buttons {
+      display: flex;
+      justify-content: space-between;
+      position: inherit;
+      box-shadow: none;
+      width: 30rem;
+  }
 }
 
-header a {
-  width: 5rem;
-  transition: all 0.2s ease-out 0s;
-  color: #464E69;
+/* buttons for the dropdown menu*/
+.nav_buttons a {
+    color: #595959;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px White;
+    padding: 7px 16px;
+    background-color: #f2f2f2;
+    display: block;
+    border-bottom: 2px solid #595959;
+    border-top: 2px solid White;
+    margin-top: 2px;
 }
 
-header a:hover {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #57595F;
-  opacity: 0.9;
+/* buttons for the regular non-dropdown menu for larger screens:*/
+@media screen and (min-width:736px) {
+  .nav_buttons a {
+      text-shadow: 1px 1px 0px Black;
+      background-color: inherit;
+      border: none;
+      color: #b3b3b3;
+      min-width: 6rem;
+      /* text-align: center; */
+  }
 }
 
-/*
-does not work, no idea why:
+/* Change color of nav buttons on hover: */
+.nav_buttons a:hover {
+  background-color: #2F4073;
+  color: #f2f2f2;
+  text-shadow: 1px 1px 0px Black;
+ }
+/*but not for the regular non-dropdown menu:*/
+@media screen and (min-width:736px) {
+.nav_buttons:hover a:hover {
+  background-color: inherit;
+  }
+}
+
 .nav_buttons a:active {
-  color: Blue;
+  /*this doesn't effect large screen version, not sure why: */
+  background-color: Blue;
+  }
+
+/* Show the dropdown menu on hover */
+.dropdown_menu:hover .nav_buttons {display: block;}
+
+/* And finally this prevents the menu from turning back into dropdown mode at large screen size:*/
+@media screen and (min-width:736px) {
+  .dropdown_menu:hover .nav_buttons {
+    display: inherit;
+  }
 }
-*/
+/*END OF DROPDOWN MENU SECTION*/
 
 main {
   position: relative;
   top: 4.5rem;
 }
-
 
 /* LANDING SECTION: */
 .landing_section {
@@ -254,7 +310,7 @@ main {
 
 .side_article {
   min-width: 15rem;
-  height: 30%;
+  height: auto;
   display: flex;
   align-items: flex-start;
     /* border: 1px solid blue; */
@@ -269,7 +325,7 @@ main {
 
 .side_article .image_box {
   height: 100%;
-  width: 40%;
+  width: 60%;
     /* border: 1px solid blue; */
 }
 
@@ -283,7 +339,7 @@ main {
 
 .side_article .image_box img {
   width: 100%;
-  height: 100%;
+  height: auto;
   border: 1px solid #b3b3b3;
 }
 
@@ -299,12 +355,6 @@ main {
   width: 65%;
     /* border: 1px solid green; */
 }
-
-/* I made all the <p> elements grey up in the Universal Styles section
-.content_box p {
-  color: #404040;
- }
-*/
 
 @media screen and (max-width:736px) {
   .content_box {
@@ -330,21 +380,21 @@ main {
   font-weight: 400;
 }
 
-/* does not work, even after deleting all cache, history, and cookies: */
-/*.side_article .content_box a:visited {
-  color: #bfbfbf;
-  font-weight: 300;
-}*/
-
-/*.side_article .content_box a:link {
-  color: #80aaff;
-  font-weight: 300;
-}*/
-
 .guest_lecture {
   background-color: #efeff5;
   border: 1px solid #b3b3b3;
 }
+
+.guest_lecture .image_box {
+  margin: 3% 3px;
+}
+
+@media screen and (max-width: 736px) {
+.guest_lecture .image_box {
+  margin-left: 1.2rem;
+  }
+}
+
 
 
 /* COURSES SECTION: */
