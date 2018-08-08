@@ -156,6 +156,7 @@ header h2 span {
     border-bottom: 2px solid #595959;
     border-top: 2px solid White;
     margin-top: 2px;
+    transition: color 0.7s ease-out 0s;
 }
 
 /* buttons for the regular non-dropdown menu for larger screens:*/
