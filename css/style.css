@@ -413,12 +413,7 @@ main {
   width: 100%;
   background: linear-gradient(to bottom right, #cccccc, #f2f2f2);
   padding: 1rem 0;
-    /* border: 1px solid red; */
 }
-
-/* this became redundant:
-.all_courses_box {
-*/
 
 .courses_section h1 {
   text-shadow: 1px 1px 0px #ffffff;
@@ -430,30 +425,29 @@ main {
   display: flex;
   justify-content: space-around;
   width: 85%;
-  /* border: 1px solid green; */
 }
 
 @media screen and (max-width:736px) {
   .course_row {
     flex-wrap: wrap;
-    max-width: 30rem;
   }
 }
 
 .course {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  width: 30%;
+  justify-content: space-between;
+  width: 33%;
+  height: auto;
   background-color: White;
-  min-width: 13rem;
+  min-width: 14rem;
   margin: 0.5rem;
-  border: 1px solid #b3b3b3;
 }
 
 .course .course_name a {
   color: #000000;
   transition: color 0.3s ease-out 0s;
+  margin: 0;
 }
 
 .course .course_name a:hover {
@@ -466,13 +460,17 @@ main {
 
 .course h4, .course p {
   color: #595959;
+  margin: 0;
+  padding: 1rem;
 }
 
 .course p {
-  /* border: 1px solid blue; */
-  height: 5.5rem;
-  margin-bottom: 1rem;
-  padding: 0 0.5rem;
+  min-height: 6rem;
+}
+
+.course h3 {
+    /* margin: 0; */
+    padding: 1rem;
 }
 
 @media screen and (max-width:736px) {
@@ -489,19 +487,16 @@ main {
 }
 
 .course .image_box {
-  height: 40%;
+  min-height: 8rem;
   width: 100%;
   padding: 0.25rem;
+  margin: 0;
 }
 
 .course .image_box img {
   width: 100%;
-  height: auto%;
-  border: 1px solid #b3b3b3;
-}
-
-.course h3 {
-  padding-top: 0.5rem;
+  height: auto;
+  min-height: 8rem;
 }
 
 /* EXHIBITS SECTION: */
@@ -528,7 +523,6 @@ main {
     padding: 0 1rem 1rem 1rem;
     display: flex;
     flex-direction: column;
-      /* border: 1px solid Red; */
   }
 
   @media screen and (max-width:1000px) {
